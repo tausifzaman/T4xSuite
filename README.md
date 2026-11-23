@@ -122,7 +122,7 @@ T4xSuite is engineered with strict local-only boundaries, zero telemetry, and a 
 ---
 
 
-## Author
+## Developer
 
 <div align="center">
 
