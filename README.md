@@ -32,21 +32,6 @@ It combines an isolated testing browser, an opt-in loopback HTTP/HTTPS MITM prox
 
 You can also check for new releases anytime directly inside the app via **About > Check update**.
 
-### Security, Privacy & VirusTotal Audit
-
-T4xSuite is engineered with strict local-only boundaries, zero telemetry, and a minimal `AndroidManifest.xml`:
-
-| Audit Check | Status / Details |
-| :--- | :--- |
-| **VirusTotal Scan** | **[0 Detections — 100% Clean](https://www.virustotal.com/gui/file/3ce448be31018026bb3d3eb421cb73fd79bb26c53451c97c380c61c2e2b86cf9?nocache=1)** |
-| **APK SHA-256** | `3ce448be31018026bb3d3eb421cb73fd79bb26c53451c97c380c61c2e2b86cf9` |
-| **Root Requirement** | **Non-Root** (works out of the box on stock, locked-bootloader Android devices) |
-| **Trackers & Analytics** | **0 Trackers** (no Firebase, Google Analytics, Crashlytics, AdMob, or telemetry SDKs) |
-| **Granted Permissions** | `android.permission.INTERNET` only |
-| **Not Requested / Never Used** | No Storage (`READ/WRITE_EXTERNAL_STORAGE`), No VPN (`BIND_VPN_SERVICE`), No Accessibility Service, No Device Admin, No Location, Camera, Contacts, or Background Foreground Service |
-| **Cloud Backup** | Disabled (`android:allowBackup="false"`) so sensitive session keys and CA material never upload to cloud backups |
-
----
 
 ## Screenshots
 
@@ -67,6 +52,23 @@ T4xSuite is engineered with strict local-only boundaries, zero telemetry, and a 
 </div>
 
 ---
+
+### Security, Privacy & VirusTotal Audit
+
+T4xSuite is engineered with strict local-only boundaries, zero telemetry, and a minimal `AndroidManifest.xml`:
+
+| Audit Check | Status / Details |
+| :--- | :--- |
+| **VirusTotal Scan** | **[0 Detections — 100% Clean](https://www.virustotal.com/gui/file/3ce448be31018026bb3d3eb421cb73fd79bb26c53451c97c380c61c2e2b86cf9?nocache=1)** |
+| **APK SHA-256** | `3ce448be31018026bb3d3eb421cb73fd79bb26c53451c97c380c61c2e2b86cf9` |
+| **Root Requirement** | **Non-Root** (works out of the box on stock, locked-bootloader Android devices) |
+| **Trackers & Analytics** | **0 Trackers** (no Firebase, Google Analytics, Crashlytics, AdMob, or telemetry SDKs) |
+| **Granted Permissions** | `android.permission.INTERNET` only |
+| **Not Requested / Never Used** | No Storage (`READ/WRITE_EXTERNAL_STORAGE`), No VPN (`BIND_VPN_SERVICE`), No Accessibility Service, No Device Admin, No Location, Camera, Contacts, or Background Foreground Service |
+| **Cloud Backup** | Disabled (`android:allowBackup="false"`) so sensitive session keys and CA material never upload to cloud backups |
+
+---
+
 
 ## Key Features
 
@@ -120,7 +122,7 @@ T4xSuite is engineered with strict local-only boundaries, zero telemetry, and a 
 ---
 
 
-## Developer
+## Author
 
 <div align="center">
 
@@ -143,5 +145,3 @@ T4xSuite is engineered with strict local-only boundaries, zero telemetry, and a 
 ![Web%20Security](https://img.shields.io/badge/Web_Security-FF4444?style=flat-square&logo=hackerone&logoColor=white)
 
 </div>
-
----
