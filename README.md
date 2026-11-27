@@ -107,7 +107,7 @@ T4xSuite is engineered with strict local-only boundaries, zero telemetry, and a 
 | Specification | Details |
 | :--- | :--- |
 | **Application Name** | T4xSuite (`dev.t4xsuite`) |
-| **Latest Release** | [v0.6.0](https://github.com/tausifzaman/T4xSuite/releases/latest) (`versionCode 5`) |
+| **Latest Release** | [v0.7.0](https://github.com/tausifzaman/T4xSuite/releases/latest) (`versionCode 5`) |
 | **Supported OS** | Android 10 (API 29) to Android 15 (API 35) |
 | **Root / Trackers** | **Non-Root** · **0 Trackers** · 100% Native Kotlin & Android Views |
 | **Manifest Permissions** | `android.permission.INTERNET` only (`allowBackup="false"`) |
