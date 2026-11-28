@@ -7,7 +7,7 @@
 **Open-Source, Non-Root Android HTTP/HTTPS Intercepting Proxy, HTTP Repeater, and Burp Suite Mobile Alternative**
 
 [![Download Latest APK](https://img.shields.io/badge/Download-Latest%20APK-080A0E?style=for-the-badge&logo=android&logoColor=D6B56D&color=D6B56D&labelColor=080A0E)](https://github.com/tausifzaman/T4xSuite/releases/latest)
-[![VirusTotal Clean](https://img.shields.io/badge/VirusTotal-0%2F65%20Clean-080A0E?style=for-the-badge&logo=virustotal&logoColor=55C99A&color=55C99A&labelColor=080A0E)](https://www.virustotal.com/gui/file/3ce448be31018026bb3d3eb421cb73fd79bb26c53451c97c380c61c2e2b86cf9?nocache=1)
+[![VirusTotal Clean](https://img.shields.io/badge/VirusTotal-0%2F65%20Clean-080A0E?style=for-the-badge&logo=virustotal&logoColor=55C99A&color=55C99A&labelColor=080A0E)](https://www.virustotal.com/gui/file/dfaa4005ce54c2d1ab94c8535a0a71f7bb261c03bc0b9724256251db2bef3542?nocache=1)
 [![Non-Root](https://img.shields.io/badge/Root-Not%20Required-080A0E?style=for-the-badge&color=55C99A&labelColor=080A0E)](https://github.com/tausifzaman/T4xSuite)
 [![Open Source](https://img.shields.io/badge/Open%20Source-GitHub-080A0E?style=for-the-badge&logo=github&logoColor=D6B56D)](https://github.com/tausifzaman/T4xSuite)
 [![Android 10+](https://img.shields.io/badge/Android-10%2B%20(API%2029--35)-080A0E?style=for-the-badge&logo=android&logoColor=D6B56D)](https://github.com/tausifzaman/T4xSuite/releases/latest)
@@ -59,8 +59,8 @@ T4xSuite is engineered with strict local-only boundaries, zero telemetry, and a 
 
 | Audit Check | Status / Details |
 | :--- | :--- |
-| **VirusTotal Scan** | **[0 Detections — 100% Clean](https://www.virustotal.com/gui/file/3ce448be31018026bb3d3eb421cb73fd79bb26c53451c97c380c61c2e2b86cf9?nocache=1)** |
-| **APK SHA-256** | `3ce448be31018026bb3d3eb421cb73fd79bb26c53451c97c380c61c2e2b86cf9` |
+| **VirusTotal Scan** | **[0 Detections — 100% Clean](https://www.virustotal.com/gui/file/dfaa4005ce54c2d1ab94c8535a0a71f7bb261c03bc0b9724256251db2bef3542?nocache=1)** |
+| **APK SHA-256** | `dfaa4005ce54c2d1ab94c8535a0a71f7bb261c03bc0b9724256251db2bef3542` |
 | **Root Requirement** | **Non-Root** (works out of the box on stock, locked-bootloader Android devices) |
 | **Trackers & Analytics** | **0 Trackers** (no Firebase, Google Analytics, Crashlytics, AdMob, or telemetry SDKs) |
 | **Granted Permissions** | `android.permission.INTERNET` only |
