@@ -20,7 +20,7 @@
 
 **T4xSuite** (in-app header: **T4X SUITE**) is a free, **open-source**, **non-root** native Android web security testing suite built as a lightweight **Burp Suite mobile alternative** for bug bounty hunters, penetration testers, security researchers, and Android developers.
 
-It combines an isolated testing browser, an opt-in loopback HTTP/HTTPS MITM proxy, inline request/response interception, live exchange history, and a standalone raw HTTP/1.1 Repeater directly on your Android device—with **zero root required**, **zero VPN service**, **zero trackers**, and **no desktop PC**.
+It combines an isolated testing browser, an opt-in loopback HTTP/HTTPS MITM proxy, inline request/response interception, high-capacity traffic history, and a multi-tab raw HTTP/1.1 Repeater with built-in Decoder, Comparer, and Intruder tools directly on your Android device—with **zero root required**, **zero VPN service**, **zero trackers**, and **no desktop PC**.
 
 ---
 
@@ -41,13 +41,13 @@ You can also check for new releases anytime directly inside the app via **About 
 | :---: | :---: |
 | <img src="assets/browser.jpg" alt="T4xSuite Testing Browser and Smart Address Bar" width="270" /> | <img src="assets/proxy2.jpg" alt="T4xSuite Loopback HTTP/HTTPS Proxy and CA Detection" width="270" /> |
 
-| Traffic History | Raw HTTP Repeater |
+| Traffic History | About & Update Checker |
 | :---: | :---: |
-| <img src="assets/history.jpg" alt="T4xSuite Live HTTP/HTTPS Traffic History" width="270" /> | <img src="assets/repeater.jpg" alt="T4xSuite Standalone Raw HTTP/1.1 Repeater" width="270" /> |
+| <img src="assets/history.jpg" alt="T4xSuite Live HTTP/HTTPS Traffic History" width="270" /> | <img src="assets/about.jpg" alt="T4xSuite About, Setup Tutorial and GitHub Release Checker" width="270" /> |
 
-| About & Update Checker |
+| Raw HTTP Repeater |
 | :---: |
-| <img src="assets/about.jpg" alt="T4xSuite About, Setup Tutorial and GitHub Release Checker" width="270" /> |
+| <img src="assets/repeater.jpg" alt="T4xSuite Standalone Raw HTTP/1.1 Repeater" width="270" /> |
 
 </div>
 
@@ -73,22 +73,23 @@ T4xSuite is engineered with strict local-only boundaries, zero telemetry, and a 
 ## Key Features
 
 ### 1. Isolated Testing Browser
-- **Smart URL & Google Search Bar:** Automatically distinguishes full `http://` and `https://` links, bare domains or `localhost` / IPv4 hosts (auto-prepending `https://` or loopback `http://`), and keyword searches (routed to Google Search).
-- **Mobile & Desktop Mode Switch:** Toggle between standard Mobile mode and Desktop (`Linux x86_64`) mode in one tap during an active session.
+- **Smart URL & Google Search Bar:** Animated gold-accented address bar with a tap-to-focus welcome screen that distinguishes full `http://` and `https://` links, bare domains or `localhost` / IPv4 hosts (auto-prepending `https://` or loopback `http://`), and keyword searches (routed to Google Search).
+- **Mobile & Desktop Viewport Switch:** Toggle between standard Mobile mode and a framed Desktop (`Linux x86_64`) viewport in one tap during an active session.
 - **Zero-Bloat Cache & Data Control:** Uses `LOAD_NO_CACHE` to prevent unnecessary disk cache accumulation and provides a confirmed **Clear Data** button to wipe WebView cache, cookies, `WebStorage`, form autocomplete, and navigation history.
 
 ### 2. Non-Root Loopback HTTP/HTTPS Intercepting Proxy
-- **Zero-Root, Zero-VPN Architecture:** Binds strictly to `127.0.0.1` on an ephemeral port and routes only T4xSuite's built-in browser—no system-wide VPN profile, root privileges, or Magisk modules needed.
+- **High-Concurrency Zero-VPN Architecture:** Binds strictly to `127.0.0.1` on an ephemeral port (handling up to 64 concurrent connections and 32 I/O workers with explicit HTTP/1.1 ALPN negotiation) and routes only T4xSuite's built-in browser—no system-wide VPN profile, root privileges, or Magisk modules needed.
 - **Opt-In HTTPS Inspection & Live CA Trust Check:** Generates an RSA-2048 local Certificate Authority encrypted at rest via Android Keystore AES-GCM, exports the public `.crt` certificate to `Download/T4X-SUITE` via MediaStore (requiring zero storage permissions), and automatically checks Android's User CA trust store to confirm installation status.
 - **Inline Request & Response Interception:** Pause HTTP and inspected HTTPS traffic inline, modify raw headers or payloads with automatic `Content-Length` recalculation, or forward original bytes untouched.
 
-### 3. Standalone Raw HTTP/1.1 Repeater
-- **Independent Replay Engine:** Sends raw HTTP/1.1 requests directly to target servers over fresh sockets with strict TLS certificate and hostname validation—working even when the proxy is stopped.
-- **Complete Framing Support:** Handles `Content-Length`, chunked transfer encoding, `HEAD`/no-body responses, request cancellation, and up to 2 MiB raw capture (64 KiB selectable monospace preview).
+### 3. Multi-Tab HTTP/1.1 Repeater & Security Toolkit
+- **Multi-Session Tabs & Landscape Split Workspace (`Rotate`):** Run multiple independent Repeater sessions (`1`, `2`, `3`, `+`) with safe tab-close triggers, switch cleanly between Request and Response in Portrait mode, or toggle **Rotate** for a full-screen 50/50 side-by-side split view with a draggable/resizable floating HTTP keypad and physical OTG keyboard shortcuts (`Ctrl+Enter` / `F5` to send).
+- **Auto cURL-to-Raw-HTTP & Instant 4-Mode Response Viewer (`Pretty | Raw | Hex | Render`):** Paste any `curl` command or type header-only requests directly without manual blank-line formatting, and inspect syntax-highlighted Pretty/Raw text, Hex dumps, or safe native Image renders with zero lag.
+- **Built-in Decoder, Comparer & Intruder Lite:** Encode/decode Base64, URL, HTML, Hex, Unicode, and Gzip or inspect/tamper JWT tokens in **Decoder**; diff requests/responses line-by-line in **Comparer**; run `§marker§` Number Range or Wordlist fuzzing in **Intruder**; and copy any request as `cURL` or `Python requests` in one tap.
 
-### 4. Live Traffic History & HAR Audit
-- **In-Memory Exchange Inspector:** Logs up to 500 newest-first exchanges with expandable request/response details, sensitive header masking (`Set-Cookie`, `WWW-Authenticate`), escaped response previews, and one-tap **Send to Repeater** replay.
-- **Offline HAR Review:** Built-in HTTP Archive (`.har`) viewer for inspecting recorded traffic and passive security header/cookie observations.
+### 4. High-Capacity Traffic History, Filtering & Session Save/Load
+- **Byte-Budgeted Exchange Inspector & Session Persistence:** Retains up to 10,000 newest-first exchanges (48 MiB memory ring buffer) with smooth paged rendering, sensitive header masking (`Set-Cookie`, `WWW-Authenticate`), one-tap **Send to Repeater**, and zero-permission Storage Access Framework **Save / Load Session** support.
+- **Advanced Wildcard Filtering, In-Body Search & HAR Audit:** Filter traffic live by wildcard domain/URL include/exclude rules, asset type toggles (Images, JS/CSS, Fonts, CONNECT tunnels), or keyword search across URLs, headers, and bodies—plus an offline `.har` review viewer.
 
 ---
 
