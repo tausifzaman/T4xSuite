@@ -47,7 +47,7 @@ You can also check for new releases anytime directly inside the app via **About 
 
 | Raw HTTP Repeater |
 | :---: |
-| <img src="assets/repeater.jpg" alt="T4xSuite Standalone Raw HTTP/1.1 Repeater" width="270" /> |
+| <img src="assets/repeater.jpg" alt="T4xSuite Standalone Raw HTTP/1.1 Repeater" width="580" /> |
 
 </div>
 
